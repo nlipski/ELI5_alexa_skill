@@ -17,7 +17,7 @@ def get_info():
     }
     sess = requests.Session()
     sess.headers.update({'User-Agent':'I am testing Alexa: Sentdex'})
-    sess.post('https://www.reddit.com/api/login', data = user_info_dict)
+    sess.post('https://ssl.reddit.com/api/login', data = user_info_dict)
     time.sleep(1)
     url = 'https://google.com'
     html = sess.get(url)
@@ -47,7 +47,7 @@ def no_intent():
     bye_text = "bye,bye..."
     return statement(bye_text)
 
-print(get_info())
+
 if __name__ == '__main__':
     print(get_info())
-    app.run(debug=True)
+    #app.run(debug=True)
